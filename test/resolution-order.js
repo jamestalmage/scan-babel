@@ -32,7 +32,7 @@ test('a dependency by itself is solved', t => {
 	t.end();
 });
 
-test('other nodes must solve before A can be', t => {
+test('other nodes must be solved before A can be', t => {
 	const graph = t.context;
 	const nodeA = graph.node('a').addDepList(['a', 'b']);
 	const nodeB = graph.node('b');
@@ -51,7 +51,7 @@ test('other nodes must solve before A can be', t => {
 	t.end();
 });
 
-test('other nodes must solve A can be (two dependencies)', t => {
+test('other nodes must be solved before A can be (two dependencies)', t => {
 	const graph = t.context;
 	const nodeA = graph.node('a').addDepList(['a', 'b', 'c']);
 	const nodeB = graph.node('b');
@@ -72,6 +72,7 @@ test('other nodes must solve A can be (two dependencies)', t => {
 
 	t.ok(nodeA.trySolve());
 	t.ok(nodeA.solved);
+	t.notOk(nodeA.trySolve(), 'trySolve should only return true once');
 
 	t.end();
 });
@@ -85,7 +86,11 @@ test('finds shortest solution', t => {
 	graph.addDependencyList(['b', 'c']);
 	graph.addDependencyList(['c']);
 
-	// graph.node('a').addDepList();
+	graph.solve();
+
+	t.same(graph.node('a').solutions, [
+		['a', 'b'], ['a', 'b', 'c']
+	]);
 
 	t.end();
 });
