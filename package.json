@@ -1,0 +1,50 @@
+{
+  "name": "scan-babel",
+  "version": "0.0.0",
+  "description": "My ultimate module",
+  "license": "MIT",
+  "repository": "jamestalmage/scan-babel",
+  "author": {
+    "name": "James Talmage",
+    "email": "james@talmage.io",
+    "url": "github.com/jamestalmage"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "babel-core": "^5.8.23",
+    "globby": "^3.0.1",
+    "loud-rejection": "^1.0.0",
+    "map-obj": "^1.0.1",
+    "meow": "^3.4.2",
+    "pify": "^2.3.0",
+    "react": "^0.14.2"
+  },
+  "devDependencies": {
+    "ava": "^0.4.0",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-react": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.2",
+    "babel-preset-stage-1": "^6.1.2",
+    "babel-preset-stage-2": "^6.1.2",
+    "babel-preset-stage-3": "^6.1.2",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
