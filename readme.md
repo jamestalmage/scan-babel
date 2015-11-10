@@ -1,68 +1,11 @@
-# scan-babel [![Build Status](https://travis-ci.org/jamestalmage/scan-babel.svg?branch=master)](https://travis-ci.org/jamestalmage/scan-babel)
-
-> My ultimate module
-
-
-## Install
+A tool for scanning for preset and test fixture files in the babel repo
 
 ```
-$ npm install --save scan-babel
-```
+git clone git@github.com:jamestalmage/scan-babel.git
+cd scan-babel
+npm link
 
-
-## Usage
-
-```js
-const scanBabel = require('scan-babel');
-
-scanBabel('unicorns');
-//=> 'unicorns & rainbows'
-```
-
-
-## API
-
-### scanBabel(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
-
-## CLI
+# clone babel and cd into it that repo
+scan-babel
 
 ```
-$ npm install --global scan-babel
-```
-
-```
-$ scan-babel --help
-
-  Usage
-    scan-babel [input]
-
-  Options
-    --foo  Lorem ipsum. [Default: false]
-
-  Examples
-    $ scan-babel
-    unicorns & rainbows
-    $ scan-babel ponies
-    ponies & rainbows
-```
-
-
-## License
-
-MIT © [James Talmage](http://github.com/jamestalmage)
